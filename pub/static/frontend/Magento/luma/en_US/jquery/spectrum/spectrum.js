@@ -1,0 +1,1 @@
+/var/www/html/magento1/lib/web/jquery/spectrum/spectrum.js
