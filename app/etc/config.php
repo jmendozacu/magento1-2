@@ -234,6 +234,7 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
+        'SimplifiedMagento_Database' => 1,
         'SimplifiedMagento_FirstModule' => 1,
         'SimplifiedMagento_RequestFlow' => 1,
         'Amazon_Core' => 1,
