@@ -2,7 +2,9 @@
 
 namespace SimplifiedMagento\Database\Api\Data;
 
-interface AffiliateMemberInterface
+use Magento\Framework\Api\ExtensibleDataInterface;
+
+interface AffiliateMemberInterface extends ExtensibleDataInterface
 {
     const NAME = "name";
     const ID = "entity_id";
@@ -73,4 +75,15 @@ interface AffiliateMemberInterface
      * @return \SimplifiedMagento\Database\Api\Data\AffiliateMemberInterface
      */
     public function setCreatedAt($createdAt);
+
+    /**
+     * @return \SimplifiedMagento\Database\Api\Data\AffiliateMemberExtensionInterface|null
+     */
+    public function getExtensionAttributes();
+
+    /**
+     * @param \SimplifiedMagento\Database\Api\Data\AffiliateMemberExtensionInterface $affiliateMemberExtension
+     * @return $this
+     */
+    public function setExtensionAttributes(\SimplifiedMagento\Database\Api\Data\AffiliateMemberExtensionInterface $affiliateMemberExtension);
 }

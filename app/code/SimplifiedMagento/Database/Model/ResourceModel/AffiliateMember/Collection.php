@@ -8,6 +8,7 @@ use SimplifiedMagento\Database\Model\ResourceModel\AffiliateMember as AffiliateM
 
 class Collection extends AbstractCollection
 {
+    protected $_idFieldName = 'entity_id';
     protected function _construct()
     {
         $this->_init(AffiliateMember::class, AffiliateMemberResource::class);

@@ -1,10 +1,9 @@
 <?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
 
+use \Magento\Framework\Component\ComponentRegistrar;
 
-namespace SimplifiedMagento\Attribute;
-
-
-class registration
-{
-
-}
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'SimplifiedMagento_Attribute', __DIR__);

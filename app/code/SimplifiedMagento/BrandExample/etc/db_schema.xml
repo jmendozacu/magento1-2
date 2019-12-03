@@ -1,0 +1,28 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="simplifiedmagento_brand_example" resource="default"
+           engine="innodb" comment="SimplifiedMagento Brand Example Table" charset="utf8" collation="utf8_general_ci">
+        <column name="id" xsi:type="int" identity="true" nullable="false" comment="Brand Id" padding="11" unsigned="true" />
+        <column name="name" xsi:type="varchar" nullable="false" comment="Brand Name" length="124" />
+        <column name="description" comment="Brand Description" nullable="true" xsi:type="text" />
+        <column name="is_enabled" xsi:type="boolean" nullable="false" default="0" comment="Is the Brand enabled?" />
+        <column name="weighing_factor" xsi:type="decimal" default="1" precision="5"  comment="Search Weighing Factor"
+                unsigned="false" nullable="false" />
+        <column name="created_at" xsi:type="timestamp" default="CURRENT_TIMESTAMP" />
+        <column name="updated_at" xsi:type="timestamp" default="CURRENT_TIMESTAMP" on_update="true" nullable="true"/>
+
+        <column xsi:type="smallint" name="website_id" padding="5" unsigned="true" nullable="false" identity="false"
+                comment="Website Id"/>
+        <constraint xsi:type="foreign" referenceId="SIMPLIFIEDMAGENTO_BRAND_EXAMPLE_WS_ID_STORE_WS_WS_ID" column="website_id"
+                    referenceTable="store_website" referenceColumn="website_id" onDelete="CASCADE" />
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id" />
+        </constraint>
+
+        <constraint xsi:type="unique" referenceId="SIMPLIFIEDMAGENTO_BRAND_EXAMPLE_NAME">
+            <column name="name" />
+        </constraint>
+
+    </table>
+</schema>

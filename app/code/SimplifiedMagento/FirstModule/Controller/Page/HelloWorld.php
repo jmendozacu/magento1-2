@@ -70,15 +70,15 @@ class HelloWorld extends \Magento\Framework\App\Action\Action
 
         /*$product = $this->productFactory->create()->load( 1);
         $product->setName("Iphone 6");
-        $productName = $product->getIdBySku("WJ06-XS-Blue");*/
-        //echo $productName;
-        //echo "main method"."</br>";
+        $productName = $product->getIdBySku("WJ06-XS-Blue");
+        echo $productName;*/
+        echo "main method"."</br>";
 
         /*$message = new \Magento\Framework\DataObject(array("greeting"=>"good afternoon"));
         $this->_eventManager->dispatch('custom_event',["greeting"=>$message]);
         echo $message->getGreeting();*/
 
-        $id = $this->http->getParam( 'id', 0);
+        /*$id = $this->http->getParam( 'id', 0);
         if($id == 1)
         {
              $this->heavyService->getheayservicemessge();
@@ -86,6 +86,6 @@ class HelloWorld extends \Magento\Framework\App\Action\Action
         else
         {
             echo "heavy service not used";
-        }
+        }*/
     }
 }

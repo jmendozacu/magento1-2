@@ -24,7 +24,7 @@ return [
         ]
     ],
     'x-frame-options' => 'SAMEORIGIN',
-    'MAGE_MODE' => 'default',
+    'MAGE_MODE' => 'developer',
     'session' => [
         'save' => 'files'
     ],
@@ -63,7 +63,7 @@ return [
         'vertex' => 1
     ],
     'downloadable_domains' => [
-        'localhost'
+        '10.16.16.139'
     ],
     'install' => [
         'date' => 'Mon, 21 Oct 2019 12:51:33 +0000'

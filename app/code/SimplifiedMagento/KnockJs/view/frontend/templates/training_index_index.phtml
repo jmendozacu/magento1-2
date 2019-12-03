@@ -1,0 +1,32 @@
+<?php declare(strict_types=1); ?>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "startSimple": {
+                        "component": "uiComponent",
+                        "template": "SimplifiedMagento_KnockJs/ui-component-template",
+                        "children": {
+                            "child1": {
+                                "component": "uiComponent",
+                                "template": "SimplifiedMagento_KnockJs/info",
+                                "children": {
+                                    "child2": {
+                                        "component": "uiComponent",
+                                        "template": "SimplifiedMagento_KnockJs/info"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+<div data-bind="scope: 'startSimple'">
+    <div data-bind="template: getTemplate()"></div>
+</div>

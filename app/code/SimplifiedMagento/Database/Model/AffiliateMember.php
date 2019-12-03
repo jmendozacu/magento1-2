@@ -2,11 +2,12 @@
 
 namespace SimplifiedMagento\Database\Model;
 
+use Magento\Framework\Model\AbstractExtensibleModel;
 use Magento\Framework\Model\AbstractModel;
 use SimplifiedMagento\Database\Api\Data\AffiliateMemberInterface;
 use SimplifiedMagento\Database\Model\ResourceModel\AffiliateMember as AffiliateMemberResource;
 
-class AffiliateMember extends AbstractModel implements AffiliateMemberInterface
+class AffiliateMember extends AbstractExtensibleModel implements AffiliateMemberInterface
 {
     protected function _construct()
     {
@@ -96,4 +97,24 @@ class AffiliateMember extends AbstractModel implements AffiliateMemberInterface
         // TODO: Implement setCreatedAt() method.
         $this->setData(AffiliateMemberInterface::CREATED_AT, $createdAt);
     }
+
+    /**
+     * @return \SimplifiedMagento\Database\Api\Data\AffiliateMemberExtensionInterface
+     */
+    public function getExtensionAttributes()
+    {
+        return $this->_getExtensionAttributes();
+    }
+
+    /**
+     * @param SimplifiedMagento\Database\Api\Data\AffiliateMemberExtensionInterface $affiliateMemberExtension
+     * @return $this
+     */
+    public function setExtensionAttributes(\SimplifiedMagento\Database\Api\Data\AffiliateMemberExtensionInterface $affiliateMemberExtension)
+    {
+        return $this->_setExtensionAttributes($affiliateMemberExtension);
+    }
+
+
+
 }

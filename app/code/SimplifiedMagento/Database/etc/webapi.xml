@@ -15,42 +15,37 @@
     </route>
 
     <route url="/V1/affiliate_member/:id" method="GET">
-        <service class="SimplifiedMagento\Database\Api\AffiliatedMemberRepositoryInterface" method="getAffiliateMemberById">
+        <service class="SimplifiedMagento\Database\Api\AffiliatedMemberRepositoryInterface" method="getAffiliateMemberById"/>
             <resources>
                 <resource ref="anonymous"/>
             </resources>
-        </service>
     </route>
 
     <route url="/V1/affiliate_member" method="POST">
-        <service class="SimplifiedMagento\Database\Api\AffiliatedMemberRepositoryInterface" method="saveAffiliateMember" >
+        <service class="SimplifiedMagento\Database\Api\AffiliatedMemberRepositoryInterface" method="saveAffiliateMember"/>
             <resources>
                 <resource ref="anonymous" />
             </resources>
-        </service>
     </route>
 
     <route url="/V1/affiliate_member/:id" method="PUT">
-        <service class="SimplifiedMagento\Database\Api\AffiliatedMemberRepositoryInterface" method="saveAffiliateMember" >
+        <service class="SimplifiedMagento\Database\Api\AffiliatedMemberRepositoryInterface" method="saveAffiliateMember"/>
             <resources>
                 <resource ref="anonymous" />
             </resources>
-        </service>
     </route>
 
     <route url="/V1/affiliate_member/:id" method="DELETE">
-        <service class="SimplifiedMagento\Database\Api\AffiliatedMemberRepositoryInterface" method="deleteById" >
+        <service class="SimplifiedMagento\Database\Api\AffiliatedMemberRepositoryInterface" method="deleteById"/>
             <resources>
                 <resource ref="anonymous" />
             </resources>
-        </service>
     </route>
 
     <route url="/V1/affiliate_member/search" method="GET">
-        <service class="SimplifiedMagento\Database\Api\AffiliatedMemberRepositoryInterface" method="getSearchResultsList" >
+        <service class="SimplifiedMagento\Database\Api\AffiliatedMemberRepositoryInterface" method="getSearchResultsList"/>
             <resources>
                 <resource ref="anonymous" />
             </resources>
-        </service>
     </route>
 </routes>

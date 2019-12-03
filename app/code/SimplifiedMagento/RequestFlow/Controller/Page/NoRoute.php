@@ -1,6 +1,5 @@
 <?php
 
-
 namespace SimplifiedMagento\RequestFlow\Controller\Page;
 
 use Magento\Framework\App\Action\Action;

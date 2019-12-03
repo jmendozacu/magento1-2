@@ -1,0 +1,23 @@
+<?php
+/** @var \SimplifiedMagento\HelloWorld\ViewModel\HelloView $viewmodel */
+/*$hello = $block->getHelloWorld();
+$helloArray = $block->helloArray();*/
+
+$viewmodel = $block->getData('view_model');
+
+$hello = $viewmodel->getHelloWorld();
+
+$helloArray = $viewmodel->helloArray();
+?>
+<h2><?php echo $viewmodel->getProductName(); ?></h2>
+<h1><?php echo $hello; ?></h1>
+<?php foreach ($helloArray as $helloworld) : ?>
+<ul>
+    <li><?php echo $helloworld; ?></li>
+</ul>
+<?php endforeach; ?>
+
+<!--<h2><?php /*echo $this->getShowHello(); */?></h2>
+<h2><?php /*print_r($this->getShowArray()); */?></h2>
+
+<h3><?php /*echo $block->getProductName(); */?></h3>-->
